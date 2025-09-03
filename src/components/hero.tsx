@@ -1,4 +1,5 @@
-import { Button } from "./ui/button";
+import { Link } from "@tanstack/react-router";
+import { Button, buttonVariants } from "./ui/button";
 
 export default function Hero() {
   return (
@@ -12,10 +13,14 @@ export default function Hero() {
           monitor your results.
         </p>
         <div className="inline-flex gap-4 mx-auto mb-8">
-          <Button>Get Started</Button>
+          <Link
+            className={buttonVariants({ variant: "default" })}
+            to="/dashboard"
+          >
+            Get Started
+          </Link>
           <Button variant="outline">Learn More</Button>
         </div>
-
         <div className="border border-zinc-200 rounded-xl w-full h-128 p-[2px]">
           <div className="border border-zinc-200 rounded-xl w-full h-full p-4 bg-zinc-50"></div>
         </div>
